@@ -1,2 +1,2 @@
-# KF_model_of_human_echolocation
+# KF model of human echolocation
 A computational simulation of human echolocation using a Kalman filter.
