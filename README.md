@@ -1,4 +1,5 @@
-#A computational model of human echolocation using a Kalman filter
+# **A computational model of human echolocation using a Kalman filter**
+
 Krasovskaya, S., Coughlan, M. J., Teng, S., 2026
 
 A 2D azimuth-based simulation of blind human echolocation using a Kalman filter. Simulates test and control conditions from \[Patel VSS 2024; Teng & Fusco, 2026], aiming to model how information is accumulated across echolocation clicks to estimate a target location. The computational model integrates Bayesian belief estimation using a Kalman filter (KF), binaural audio processing, and motor control to simulate how people localize targets using self-generated click sounds. The KF continuously updates a belief estimate of target location from echo-derived ITD measurements, with movement bias scaling proportionally to KF confidence.
@@ -8,7 +9,7 @@ Three experimental conditions are simulated:
 2. Big target — audio feedback, high-reflectivity target (29 × 36 cm)
 3. Small target — audio feedback, low-reflectivity target (2.5 × 17 cm)
 
-##Structure:
+## Structure:
 ```
 **---Parameter generation---**
 └── 1-generate\_subs.py                         # Generate experimental_setup.json containing subject parameters and target positions 
@@ -54,13 +55,13 @@ Three experimental conditions are simulated:
 ```
 _____________________________________________________________________________
 
-##How to run the simulation:
-###Step 0 — generate subjects (once only)
+## How to run the simulation:
+### Step 0 — generate subjects (once only)
 Run 1-generate_subs.py to create experimental_setup.json. This file defines
 subject parameters, target positions, and the random seed used across all three
 conditions to ensure consistency.
 
-###Step 1 — configure
+### Step 1 — configure
 Open model_launch.py. Edit the three sections at the top:
 ```
  1. Set condition
@@ -74,17 +75,17 @@ RUN_AUDIO_TEST   = False   # verify audio files load correctly
 RUN_SINGLE_TRIAL = False   # diagnostic single-trial run
 RUN_EXPERIMENT   = True    # full multi-trial experiment
 ```
-###Step 2 — Run
+### Step 2 — Run
 Then press Run. Output is saved automatically to the appropriate folder
 (`sim_control_condition`, `sim_test_big`, or `sim_test_small`).
 
 _____________________________________________________________________________
 
-##Audio file naming
+## Audio file naming
 The simulation expects stereo .wav files named by angle, e.g.:
 `0deg.wav`, `-45.wav`, `angle_15.wav`, `az-30_tdist100_Idist100_fs96000.wav`
 _____________________________________________________________________________
 
-##Analysis scripts
+## Analysis scripts
 Run these after all three conditions have been simulated. Each script loads the
 JSON results files and produces figures and tables with results.
