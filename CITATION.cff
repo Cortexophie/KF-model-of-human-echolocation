@@ -1,0 +1,46 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Kalman filter model of human echolocation
+message: >-
+  If you use this code, please cite it using the metadata
+  from this file.
+type: software
+authors:
+  - given-names: Sofia
+    family-names: Krasovskaya
+    affiliation: The Smith-Kettlewell Eye Research Institute
+    orcid: 'https://orcid.org/0000-0002-9120-7407'
+  - given-names: James M.
+    family-names: Coughlan
+    affiliation: The Smith-Kettlewell Eye Research Institute
+  - given-names: Santani
+    family-names: Teng
+    affiliation: The Smith-Kettlewell Eye Research Institute
+identifiers:
+  - type: doi
+    value: 10.5072/zenodo.592661
+    description: The Zenodo DOI for this model version
+repository-code: >-
+  https://github.com/Cortexophie/KF-model-of-human-echolocation.git
+abstract: >-
+  A 2D azimuth-based simulation of blind human echolocation
+  using a Kalman filter. Simulates test and control
+  conditions from [Patel VSS 2024; Teng & Fusco, 2026],
+  aiming to model how information is accumulated across
+  echolocation clicks to estimate a target location. The
+  computational model integrates Bayesian belief estimation
+  using a Kalman filter (KF), binaural audio processing, and
+  motor control to simulate how people localize targets
+  using self-generated click sounds. The KF continuously
+  updates a belief estimate of target location from
+  echo-derived ITD measurements, with movement bias scaling
+  proportionally to KF confidence.
+keywords:
+  - echolocation
+  - computational modeling
+  - echolocalization
+  - active sensing
+  - Kalman filter
+license: MIT
