@@ -1,4 +1,4 @@
-[![DOI](https://sandbox.zenodo.org/badge/1309152761.svg)](https://handle.test.datacite.org/10.5072/zenodo.592661)
+[![DOI](https://zenodo.org/badge/1309152761.svg)](https://doi.org/10.5281/zenodo.22102932)
 # **A computational model of human echolocation using a Kalman filter**
 
 Krasovskaya, S., Coughlan, M. J., Teng, S., 2026
